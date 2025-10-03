@@ -124,12 +124,6 @@ export const TECH_STACK: TechStack[] = [
 
   // --- Design Tools ---
   {
-    key: "photoshop",
-    title: "Photoshop",
-    href: "https://www.adobe.com/products/photoshop.html",
-    categories: ["Tools", "Design"],
-  },
-  {
     key: "canva",
     title: "Canva",
     href: "https://www.canva.com/",
