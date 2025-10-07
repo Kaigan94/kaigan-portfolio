@@ -2,8 +2,27 @@ import type { Project } from "../types/projects";
 
 export const PROJECTS: Project[] = [
   {
+    id: "devtalk",
+    title: "DevTalk Chat",
+    period: {
+      start: "10.2025",
+      end: "",
+    },
+    link: "https://github.com/WictorNisa/DevTalk",
+    skills: ["React", "TypeScript", "Motion", "Tailwind CSS", "Figma", "Canva"],
+    description: `A real-time chat platform for developers — like Discord meets Stack Overflow.  
+- Built with React (Vite + TypeScript) and Tailwind CSS on the frontend  
+- Powered by Java Spring Boot and PostgreSQL on the backend  
+- GitHub OAuth authentication  
+- Real-time messaging with WebSocket  
+- Includes landing page, login page, and chat dashboard  
+- Built using Agile (SCRUM) workflow with Trello and GitHub branches`,
+    logo: "/icons/project-icons/devtalk-logo.svg",
+    isExpanded: false,
+  },
+  {
     id: "new-portfolio",
-    title: "Modern Portfolio",
+    title: "New Portfolio",
     period: {
       start: "07.2025",
       end: "09.2025",
@@ -55,7 +74,7 @@ Blog Features:
     title: "Noctra Counting App",
     period: {
       start: "09.2024",
-      end: "11.2024",
+      end: "10.2024",
     },
     link: "https://noctra.netlify.app/",
     skills: ["HTML", "CSS", "JavaScript", "Canva"],

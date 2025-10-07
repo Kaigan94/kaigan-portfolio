@@ -56,7 +56,7 @@ export const EXPERIENCES: Experience[] = [
       },
       {
         id: "edu-2",
-        title: "Painter and Decorator — Municipal Adult Education (Komvux)",
+        title: "Painter and Decorator – Municipal Adult Education (Komvux)",
         employmentPeriod: {
           start: "2022",
           end: "2023",
@@ -78,7 +78,7 @@ export const EXPERIENCES: Experience[] = [
       },
       {
         id: "edu-3",
-        title: "Furniture Carpentry — Municipal Adult Education (Komvux)",
+        title: "Furniture Carpentry – Municipal Adult Education (Komvux)",
         employmentPeriod: {
           start: "2020",
           end: "2021",
