@@ -3,14 +3,14 @@ import type { Project } from "../types/projects";
 export const PROJECTS: Project[] = [
   {
     id: "devtalk",
-    title: "DevTalk Chat",
+    title: "DevTalk Chat App",
     period: {
       start: "10.2025",
       end: "",
     },
     link: "https://github.com/WictorNisa/DevTalk",
     skills: ["React", "TypeScript", "Motion", "Tailwind CSS", "Figma", "Canva"],
-    description: `A real-time chat platform for developers — like Discord meets Stack Overflow.  
+    description: `A real-time chat platform for developers – think "Discord meets Stack Overflow".  
 - Built with React (Vite + TypeScript) and Tailwind CSS on the frontend  
 - Powered by Java Spring Boot and PostgreSQL on the backend  
 - GitHub OAuth authentication  

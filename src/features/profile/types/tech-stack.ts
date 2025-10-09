@@ -14,10 +14,10 @@ export type TechStack = {
   title: string;
   /** Official website URL. */
   href: string;
+  /** Row grouping used to render items under Stack vs. Tools. */
+  segment: "stack" | "tools";
   /** Category tags used for grouping/filtering. */
   categories: string[];
   /** If true, use theme-specific icons for dark/light mode. */
   theme?: boolean;
-  /** Proficiency level for the technology. */
-  // level?: "proficient" | "working" | "learning";
 };
