@@ -64,7 +64,7 @@ export default function ParticlesWaves({
     camera.position.set(0, cameraHeight, separation * 12);
     camera.lookAt(0, 0, 0);
 
-    // mjuk “glow” som sprite
+    // soft glow as sprite
     const spriteCanvas = document.createElement("canvas");
     spriteCanvas.width = spriteCanvas.height = 64;
     const ctx = spriteCanvas.getContext("2d")!;

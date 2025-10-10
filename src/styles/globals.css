@@ -78,7 +78,7 @@
   --background: oklch(1 0 0);
 
   /* zinc-950 */
-  --foreground: oklch(0.141 0.005 285.823);
+  --foreground: oklch(0.11 0.005 285.823);
 
   /* zinc-950 */
   --primary: oklch(0.141 0.005 285.823);
@@ -93,7 +93,7 @@
   --secondary-foreground: oklch(0.141 0.005 285.823);
 
   /* zinc-100 */
-  --muted: oklch(0.967 0.001 286.375);
+  --muted: oklch(0.957 0.001 286.375);
 
   /* zinc-500 */
   --muted-foreground: oklch(0.552 0.016 285.938);
@@ -110,10 +110,10 @@
   /* zinc-950 */
   --popover-foreground: oklch(0.141 0.005 285.823);
 
-  --popover-border: color-mix(in oklab, var(--color-black) 15%, transparent);
+  --popover-border: color-mix(in oklab, var(--color-black) 18%, transparent);
 
   /* zinc-100 */
-  --accent: oklch(0.967 0.001 286.375);
+  --accent: oklch(0.957 0.001 286.375);
 
   --accent2: color-mix(in oklab, var(--accent) 50%, transparent);
 
@@ -121,10 +121,10 @@
   --accent-foreground: oklch(0.21 0.006 285.885);
 
   /* zinc-200 */
-  --border: oklch(0.92 0.004 286.32);
+  --border: oklch(0.9 0.004 286.32);
 
   /* color-mix */
-  --edge: color-mix(in oklab, var(--border) 64%, var(--background));
+  --edge: color-mix(in oklab, var(--border) 74%, var(--background));
 
   /* zinc-200 */
   --input: oklch(0.92 0.004 286.32);
@@ -213,9 +213,9 @@
   --accent-foreground: oklch(0.985 0 0);
 
   /* zinc-800 */
-  --border: oklch(0.274 0.006 286.033);
+  --border: oklch(0.284 0.006 286.033);
 
-  /* --edge: color-mix(in oklab, var(--border) 64%, var(--background)); */
+  --edge: color-mix(in oklab, var(--border) 64%, var(--background));
 
   /* zinc-800 */
   --input: oklch(0.274 0.006 286.033);
@@ -250,7 +250,7 @@
   /* zinc-950 */
   --selection-foreground: oklch(0.141 0.005 285.823);
 
-  --shadow-popover: 0 0 24px rgba(0, 0, 0, 0.5);
+  --shadow-popover: 0 0 44px rgba(0, 0, 0, 0.5);
 }
 
 @layer base {
@@ -283,13 +283,13 @@
     }
 
     ::view-transition-new(root) {
-      animation: theme-circle-blur 800ms ease-out;
+      animation: theme-circle-blur 600ms ease-out;
     }
 
     @keyframes theme-circle-blur {
       from {
         clip-path: circle(0% at 50% 50%);
-        filter: blur(20px);
+        filter: blur(10px);
       }
       to {
         clip-path: circle(150% at 70% 30%);
@@ -300,7 +300,7 @@
 
   /* Custom scrollbar styling. Thanks @shadcn-ui */
   ::-webkit-scrollbar {
-    width: 5px;
+    width: 10px;
   }
   ::-webkit-scrollbar-track {
     background: transparent;

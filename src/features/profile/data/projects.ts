@@ -41,7 +41,7 @@ export const PROJECTS: Project[] = [
     ],
     description: `A minimal portfolio, blog and component library.  
 - Built while practicing TypeScript, Next.js, Radix UI, Tailwind CSS and Framer Motion  
-- Helped me get comfortable with Next.js and creating clean layouts
+- Helped me get better with TypeScript, more comfortable with Next.js and creating clean layouts
 - Clean and modern design
 - Light and dark theme support
 - vCard integration
