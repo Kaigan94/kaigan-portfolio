@@ -1,5 +1,3 @@
-import { Coffee } from "lucide-react";
-
 import type { User } from "@/features/profile/types/user";
 
 export const USER: User = {

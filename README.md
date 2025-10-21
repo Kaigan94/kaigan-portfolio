@@ -71,14 +71,14 @@ pnpm start
 
 ## Deployment
 
-Vercel is the quickest route—just import the repo and add the environment variables from `.env.example`. For other hosts, run `pnpm build` and serve the output of `.next` with any Node-compatible platform.
+Vercel is the quickest route-just import the repo and add the environment variables from `.env.example`. For other hosts, run `pnpm build` and serve the output of `.next` with any Node-compatible platform.
 
 ## Customisation Checklist
 
 Use this when adapting the template:
 
 1. Replace profile data in `src/features/profile/data/*`.
-2. Update branding assets in `public/icons/` (see [branding guide](docs/BRANDING.md)).
+2. Update branding assets in `public/icons/` (swap in your own SVGs/icons).
 3. Tailor analytics/social metadata in `src/app/layout.tsx`.
 4. Refresh registry content via `pnpm run build:registry`.
 

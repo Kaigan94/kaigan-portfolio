@@ -52,7 +52,7 @@ Blog Features:
 - RSS Feed for easy content distribution
 - Syntax Highlighting for better readability`,
     logo: "/icons/favicons/favicon.svg",
-    isExpanded: true,
+    isExpanded: false,
   },
   {
     id: "rpg-portfolio",
