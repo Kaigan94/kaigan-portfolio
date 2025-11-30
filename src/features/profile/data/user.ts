@@ -28,12 +28,12 @@ export const USER: User = {
     },
   ],
   about: `
-Hej, I’m Nicholas 👋  
-I’m a frontend developer in the making and fullstack student who enjoys turning ideas into clean, usable interfaces.
+Hej 👋  
+I’m Nicholas – a frontend developer in the making and fullstack student who enjoys turning my ideas into usable interfaces.
 
 When I’m not deep in code, you’ll probably find me gaming, headbanging, spending time with my dog and partner, exploring fantasy worlds filled with dragons, swords and magic – or recharging with a cup of Java ☕️ (pun intended).
 
-This December I start a six‑month LIA internship, the capstone of my studies. I’m on the hunt for a team that wants someone dedicated, detail-obsessed, and ready to give it all. If that sounds like your crew, let’s talk.
+I'm always on the hunt for new challenges and opportunities to grow as a developer. Feel free to reach out if you want to connect or collaborate on something exciting!
   `,
   avatar: "/images/kaigan.svg",
   ogImage: "/og.png",

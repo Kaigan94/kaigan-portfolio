@@ -1,0 +1,89 @@
+---
+title: Introducing DevTalk – Real-Time Chat for Developers
+description: Announcing DevTalk, a modern real-time chat app built for developers to collaborate, share code, and connect instantly.
+image: /images/devtalk-preview.webp
+createdAt: 2025-11-30
+updatedAt: 2025-11-30
+---
+
+## What is DevTalk?
+
+DevTalk is a real-time chat platform designed specifically for developers. Whether you’re collaborating on a project, sharing code snippets, or just looking to connect with fellow devs, DevTalk makes communication seamless and productive.
+
+## Key Features
+
+- **Instant Messaging**: Real-time chat with a smooth experience.
+- **Channels & Groups**: Organize discussions by topic, team, or project.
+- **Syntax Highlighting**: Supports multiple languages for readable code blocks.
+- **GitHub OAuth**: Easy one-step login using GitHub OAuth 2.0
+- **Notifications**: Stay updated with mentions.
+- **Dark & Light Mode**: Switch themes for comfort and accessibility.
+- **i18next**: Using translations with i18next. Currently English and Swedish.
+
+## Tech Stack
+
+- React + Vite
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Motion
+- GitHub OAuth 2.0
+- Zustand for storing
+- Websocket for real-time communication
+- i18next for language translations
+- Java & Spring Boot for the backend
+- PostgreSQL for data management
+
+## Why DevTalk?
+
+We built DevTalk to solve the pain points of developer communication:
+
+- Share code without losing formatting
+- GitHub OAuth 2.0 for easy login, suitable for devs
+- Organize discussions for projects and teams
+- Enjoy a distraction-free, modern UI
+- Connect instantly, anywhere
+
+## Live Demo
+
+Want to try DevTalk?  
+[Check out the live preview](https://github.com/WictorNisa/DevTalk) and join the conversation!
+
+## Example Code Snippet
+
+```tsx
+// Send a message in DevTalk
+sendMessage: (channelId: string, content: string) => {
+  const { stompClient, isConnected } = useWebSocketStore.getState();
+
+  if (!isConnected() || !stompClient) {
+    console.error("Cannot send message: Not connected");
+    return;
+  }
+
+  const userId = getAuthenticatedUserId();
+  if (userId === null) {
+    console.error("Cannot send message: User not authenticated");
+    return;
+  }
+
+  const messagePayload = {
+    content,
+    userId,
+    channelId: parseInt(channelId),
+    threadId: null,
+    parentMessageId: null,
+    destination: `/topic/room/${channelId}`,
+  };
+
+  stompClient.publish({
+    destination: "/app/chat.send",
+    body: JSON.stringify(messagePayload),
+    headers: { "content-type": "application/json" },
+  });
+},
+```
+
+## License
+
+DevTalk is released under the [MIT license](https://github.com/WictorNisa/DevTalk/blob/main/LICENSE).

@@ -13,6 +13,8 @@ export function PostItem({
   post: Post;
   shouldPreloadImage?: boolean;
 }) {
+  const isNew = dayjs().diff(dayjs(post.metadata.createdAt), "day") <= 7;
+
   return (
     <Link
       href={`/blog/${post.slug}`}
@@ -36,7 +38,7 @@ export function PostItem({
 
           <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-black/10 ring-inset dark:ring-white/10" />
 
-          {post.metadata.new && (
+          {isNew && (
             <span className="absolute top-1.5 right-1.5 rounded-md bg-info px-1.5 font-mono text-sm font-medium text-white text-shadow-xs">
               New
             </span>

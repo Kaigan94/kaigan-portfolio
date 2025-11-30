@@ -6,23 +6,35 @@ export const PROJECTS: Project[] = [
     title: "DevTalk Chat App",
     period: {
       start: "10.2025",
-      end: "",
+      end: "12.2025",
     },
     link: "https://github.com/WictorNisa/DevTalk",
-    skills: ["React", "TypeScript", "Motion", "Tailwind CSS", "Figma", "Canva"],
-    description: `A real-time chat platform for developers – think "Discord meets Stack Overflow".  
+    skills: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Motion",
+      "Figma",
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "Zustand",
+      "WebSocket",
+      "GitHub OAuth",
+    ],
+    description: `A real-time chat platform for developers – think "Discord meets Slack".  
 - Built with React (Vite + TypeScript) and Tailwind CSS on the frontend  
 - Powered by Java Spring Boot and PostgreSQL on the backend  
 - GitHub OAuth authentication  
 - Real-time messaging with WebSocket  
-- Includes landing page, login page, and chat dashboard  
+- Includes landing page, login feature and a dashboard with live chat rooms
 - Built using Agile (SCRUM) workflow with Trello and GitHub branches`,
     logo: "/icons/project-icons/devtalk-logo.svg",
-    isExpanded: false,
+    isExpanded: true,
   },
   {
-    id: "new-portfolio",
-    title: "New Portfolio",
+    id: "modern-portfolio",
+    title: "Modern Portfolio",
     period: {
       start: "07.2025",
       end: "09.2025",
@@ -37,9 +49,8 @@ export const PROJECTS: Project[] = [
       "Next.js",
       "shadcn/ui",
       "Figma",
-      "Canva",
     ],
-    description: `A minimal portfolio, blog and component library.  
+    description: `A modern take on my portfolio, blog and component library.  
 - Built while practicing TypeScript, Next.js, Radix UI, Tailwind CSS and Framer Motion  
 - Helped me get better with TypeScript, more comfortable with Next.js and creating clean layouts
 - Clean and modern design

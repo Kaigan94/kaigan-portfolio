@@ -77,14 +77,6 @@ export const TECH_STACK: TechStack[] = [
     theme: true,
   },
   {
-    key: "radixui",
-    title: "Radix UI",
-    href: "https://www.radix-ui.com/",
-    segment: "stack",
-    categories: ["Library", "Component Library"],
-    theme: true,
-  },
-  {
     key: "motion",
     title: "Motion",
     href: "https://motion.dev/",
@@ -141,13 +133,6 @@ export const TECH_STACK: TechStack[] = [
   },
 
   // --- Design Tools ---
-  {
-    key: "canva",
-    title: "Canva",
-    href: "https://www.canva.com/",
-    segment: "tools",
-    categories: ["Tools", "Design"],
-  },
   {
     key: "figma",
     title: "Figma",
