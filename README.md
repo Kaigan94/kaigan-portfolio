@@ -2,7 +2,7 @@
 
 A minimal portfolio and blog to showcase my work as a developer.
 
-Check out the live site: [kaigan.dev](https://kaigan.dev)
+Check out the live site: [kaigan-portfolio](https://kaigan-portfolio.vercel.app)
 
 <p align="center">
   <img
