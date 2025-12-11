@@ -4,21 +4,22 @@ export const EXPERIENCES: Experience[] = [
   // Work
   {
     id: "work-1",
-    companyName: "Teknikhögskolan, Lund",
-    companyLogo: "/icons/th-logga.svg",
+    companyName: "Avalanche Studios Group",
+    companyLogo: "/icons/avalanche.png",
     positions: [
       {
         id: "pos-1",
-        title: "Fullstack Development Student",
+        title: "UI Developer",
         employmentPeriod: {
-          start: "2024",
+          start: "2025-12",
           end: "",
         },
-        employmentType: "Full-time studies",
+        employmentType: "Internship",
         icon: "code",
-        description: "Two-year Higher Vocational Education (YH) program.",
+        description:
+          "Internship position as a UI Developer at Avalanche Studios Group, focusing on front-end development and user interface design within the gaming industry. Responsibilities include collaborating with design and development teams to create engaging and user-friendly interfaces for upcoming game titles.",
         skills: [],
-        isExpanded: false,
+        isExpanded: true,
       },
     ],
     isCurrentEmployer: true,
@@ -53,7 +54,7 @@ export const EXPERIENCES: Experience[] = [
           "Git",
           "Postman",
         ],
-        isExpanded: true,
+        isExpanded: false,
       },
       {
         id: "edu-2",
