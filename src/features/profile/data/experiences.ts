@@ -21,6 +21,7 @@ export const EXPERIENCES: Experience[] = [
         skills: [
           "TypeScript",
           "React",
+          "CSS",
           "C++",
           "JSON",
           "Apex Engine",
