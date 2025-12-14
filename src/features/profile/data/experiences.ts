@@ -9,7 +9,7 @@ export const EXPERIENCES: Experience[] = [
     positions: [
       {
         id: "pos-1",
-        title: "UI Developer",
+        title: "Game UI Developer",
         employmentPeriod: {
           start: "2025-12",
           end: "",
