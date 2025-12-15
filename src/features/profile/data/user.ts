@@ -9,22 +9,21 @@ export const USER: User = {
   pronouns: "he/him",
   bio: "Creating with code. Small details matter.",
   flipSentences: [
-    "Coffee Monster",
-    "Gamer",
-    "Aspiring Coder",
     "Frontend Developer",
+    "Coffee Monster",
+    "Game Enthusiast",
     "Backend Explorer",
   ],
   address: "Lund, Sweden",
   phoneNumber: "KzQ2NzMwMzQwNDM0", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
   email: "a2FpZ2FuLmNvZGVzQGdtYWlsLmNvbQ==", // base64 encoded
   website: "https://kaigan-portfolio.vercel.app/",
-  jobTitle: "Frontend Developer",
+  jobTitle: "Game UI Developer Intern (at Avalanche Studios Group)",
   jobs: [
     {
-      title: "Fullstack Student",
-      company: "Teknikhögskolan",
-      website: "https://teknikhogskolan.se/om-oss/studieorter/lund/",
+      title: "Junior UI Developer",
+      company: "Avalanche Studios Group",
+      website: "https://avalanchestudios.com/",
     },
   ],
   about: `
@@ -46,9 +45,14 @@ I'm always on the hunt for new challenges and opportunities to grow as a develop
     "fullstack",
     "frontend",
     "developer",
+    "avalanche",
     "portfolio",
     "personal",
     "student",
+    "tech",
+    "game",
+    "ui",
+    "developer",
     "portfolio",
     "react",
     "lund",

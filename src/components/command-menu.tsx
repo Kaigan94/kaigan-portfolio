@@ -3,14 +3,20 @@
 import { useCommandState } from "cmdk";
 import type { LucideProps } from "lucide-react";
 import {
+  AwardIcon,
+  BookmarkIcon,
+  BoxIcon,
   BriefcaseBusinessIcon,
-  CircleUserIcon,
   CornerDownLeftIcon,
-  LetterTextIcon,
+  DownloadIcon,
+  LayersIcon,
   MoonStarIcon,
+  QuoteIcon,
   RssIcon,
-  SunIcon,
+  ShieldCheckIcon,
+  SunMediumIcon,
   TextIcon,
+  TextInitialIcon,
 } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -34,6 +40,7 @@ import { Icons } from "./icons";
 import { KaiganMark } from "./kaigan-mark";
 import { KaiganWordmark } from "./kaigan-wordmark";
 import { Button } from "./ui/button";
+import { Kbd, KbdGroup } from "./ui/kbd";
 import { Separator } from "./ui/separator";
 
 type CommandLinkItem = {
@@ -68,12 +75,12 @@ const PORTFOLIO_LINKS: CommandLinkItem[] = [
   {
     title: "About Me",
     href: "/#about",
-    icon: LetterTextIcon,
+    icon: TextInitialIcon,
   },
   {
     title: "Tech Stack",
     href: "/#stack",
-    icon: Icons.ts,
+    icon: LayersIcon,
   },
   {
     title: "Experience",
@@ -83,22 +90,32 @@ const PORTFOLIO_LINKS: CommandLinkItem[] = [
   {
     title: "Projects",
     href: "/#projects",
-    icon: Icons.project,
+    icon: BoxIcon,
   },
+  // {
+  //   title: "Testimonials",
+  //   href: "/#testimonials",
+  //   icon: QuoteIcon,
+  // },
   // {
   //   title: "Honors & Awards",
   //   href: "/#awards",
-  //   icon: Icons.award,
+  //   icon: AwardIcon,
   // },
   // {
   //   title: "Certifications",
   //   href: "/#certs",
-  //   icon: Icons.certificate,
+  //   icon: ShieldCheckIcon,
+  // },
+  // {
+  //   title: "Bookmarks",
+  //   href: "/#bookmarks",
+  //   icon: BookmarkIcon,
   // },
   {
     title: "Download vCard",
     href: "/vcard",
-    icon: CircleUserIcon,
+    icon: DownloadIcon,
   },
 ];
 
@@ -181,8 +198,7 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
       <Button
         variant="secondary"
         className={cn(
-          "h-8 gap-1.5 rounded-full bg-zinc-50 px-2.5 text-muted-foreground select-none hover:bg-zinc-50 dark:bg-zinc-900 dark:hover:bg-zinc-900",
-          "not-dark:border dark:inset-shadow-[1px_1px_1px,0px_0px_2px] dark:inset-shadow-white/15"
+          "h-8 gap-1.5 rounded-full border border-input bg-white px-2.5 text-muted-foreground shadow-xs select-none hover:bg-white dark:bg-input/30 dark:hover:bg-input/30"
         )}
         onClick={() => setOpen(true)}
       >
@@ -204,18 +220,21 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
           Search
         </span>
 
-        <CommandMenuKbd className="hidden tracking-wider sm:in-[.os-macos_&]:flex">
-          ⌘K
-        </CommandMenuKbd>
-        <CommandMenuKbd className="hidden sm:not-[.os-macos_&]:flex">
-          Ctrl K
-        </CommandMenuKbd>
+        <KbdGroup className="hidden sm:in-[.os-macos_&]:flex">
+          <Kbd className="w-5 min-w-5">⌘</Kbd>
+          <Kbd className="w-5 min-w-5">K</Kbd>
+        </KbdGroup>
+
+        <KbdGroup className="hidden sm:not-[.os-macos_&]:flex">
+          <Kbd>Ctrl</Kbd>
+          <Kbd className="w-5 min-w-5">K</Kbd>
+        </KbdGroup>
       </Button>
 
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
 
-        <CommandList className="min-h-80">
+        <CommandList className="supports-timeline-scroll:scroll-fade-effect-y min-h-80">
           <CommandEmpty>No results found.</CommandEmpty>
 
           <CommandLinkGroup
@@ -244,17 +263,17 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
           <CommandSeparator />
 
           <CommandLinkGroup
-            heading="Components"
-            links={componentLinks}
-            fallbackIcon={Icons.react}
+            heading="Social Links"
+            links={SOCIAL_LINK_ITEMS}
             onLinkSelect={handleOpenLink}
           />
 
           <CommandSeparator />
 
           <CommandLinkGroup
-            heading="Social Links"
-            links={SOCIAL_LINK_ITEMS}
+            heading="Components"
+            links={componentLinks}
+            fallbackIcon={Icons.react}
             onLinkSelect={handleOpenLink}
           />
 
@@ -265,7 +284,7 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
               keywords={["theme"]}
               onSelect={() => handleThemeChange("light")}
             >
-              <SunIcon />
+              <SunMediumIcon />
               Light
             </CommandItem>
             <CommandItem
@@ -274,13 +293,6 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
             >
               <MoonStarIcon />
               Dark
-            </CommandItem>
-            <CommandItem
-              keywords={["theme"]}
-              onSelect={() => handleThemeChange("system")}
-            >
-              <Icons.contrast />
-              Auto
             </CommandItem>
           </CommandGroup>
         </CommandList>
@@ -312,10 +324,11 @@ function CommandLinkGroup({
             key={link.href}
             keywords={link.keywords}
             onSelect={() => onLinkSelect(link.href, link.openInNewTab)}
+            className="cursor-pointer"
           >
             {link?.iconImage ? (
               <Image
-                className="rounded-sm"
+                className="corner-squircle rounded-sm supports-corner-shape:rounded-[50%]"
                 src={link.iconImage}
                 alt={link.title}
                 width={16}
@@ -349,7 +362,6 @@ function buildCommandMetaMap() {
 
   commandMetaMap.set("Light", { commandKind: "command" });
   commandMetaMap.set("Dark", { commandKind: "command" });
-  commandMetaMap.set("Auto", { commandKind: "command" });
 
   SOCIAL_LINK_ITEMS.forEach((item) => {
     commandMetaMap.set(item.title, {
@@ -378,34 +390,21 @@ function CommandMenuFooter() {
       <div className="flex h-10" />
 
       <div className="absolute inset-x-0 bottom-0 flex h-10 items-center justify-between gap-2 border-t bg-zinc-100/30 px-4 text-xs font-medium dark:bg-zinc-800/30">
-        <KaiganWordmark className="size-16 text-muted-foreground" aria-hidden />
-
+        <KaiganWordmark className="size-12 text-muted-foreground" aria-hidden />
         <div className="flex shrink-0 items-center gap-2">
           <span>{ENTER_ACTION_LABELS[selectedCommandKind]}</span>
-          <CommandMenuKbd>
+          <Kbd>
             <CornerDownLeftIcon />
-          </CommandMenuKbd>
+          </Kbd>
           <Separator
             orientation="vertical"
             className="data-[orientation=vertical]:h-4"
           />
           <span className="text-muted-foreground">Exit</span>
-          <CommandMenuKbd>Esc</CommandMenuKbd>
+          <Kbd>Esc</Kbd>
         </div>
       </div>
     </>
-  );
-}
-
-function CommandMenuKbd({ className, ...props }: React.ComponentProps<"kbd">) {
-  return (
-    <kbd
-      className={cn(
-        "pointer-events-none flex h-5 min-w-6 items-center justify-center gap-1 rounded-sm bg-black/5 px-1 font-sans text-[13px] font-normal text-muted-foreground shadow-[inset_0_-1px_2px] shadow-black/10 select-none dark:bg-white/10 dark:shadow-white/10 dark:text-shadow-xs [&_svg:not([class*='size-'])]:size-3",
-        className
-      )}
-      {...props}
-    />
   );
 }
 
