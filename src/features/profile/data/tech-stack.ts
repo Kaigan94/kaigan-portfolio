@@ -30,13 +30,6 @@ export const TECH_STACK: TechStack[] = [
     segment: "stack",
     categories: ["Language"],
   },
-  {
-    key: "java",
-    title: "Java",
-    href: "https://www.java.com/",
-    segment: "stack",
-    categories: ["Language"],
-  },
 
   // --- Frameworks & Libraries ---
   {
@@ -47,14 +40,6 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Library", "UI Library"],
   },
   {
-    key: "nextjs2",
-    title: "Next.js",
-    href: "https://nextjs.org/",
-    segment: "stack",
-    categories: ["Framework"],
-    theme: true,
-  },
-  {
     key: "tailwindcss",
     title: "Tailwind CSS",
     href: "https://tailwindcss.com/",
@@ -62,11 +47,12 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Framework"],
   },
   {
-    key: "spring",
-    title: "Spring",
-    href: "https://spring.io/",
+    key: "nextjs2",
+    title: "Next.js",
+    href: "https://nextjs.org/",
     segment: "stack",
     categories: ["Framework"],
+    theme: true,
   },
   {
     key: "shadcn-ui",
@@ -83,6 +69,13 @@ export const TECH_STACK: TechStack[] = [
     segment: "stack",
     categories: ["Library", "Animation"],
   },
+  {
+    key: "java",
+    title: "Java",
+    href: "https://www.java.com/",
+    segment: "stack",
+    categories: ["Language"],
+  },
 
   // --- Runtime & Backend ---
   {
@@ -91,6 +84,13 @@ export const TECH_STACK: TechStack[] = [
     href: "https://nodejs.org/",
     segment: "stack",
     categories: ["Runtime Environment"],
+  },
+  {
+    key: "spring",
+    title: "Spring",
+    href: "https://spring.io/",
+    segment: "stack",
+    categories: ["Framework"],
   },
 
   // --- Database ---

@@ -13,6 +13,7 @@ export const PROJECTS: Project[] = [
       "React",
       "TypeScript",
       "Tailwind CSS",
+      "shadcn/ui",
       "Motion",
       "Figma",
       "Java",
@@ -22,13 +23,14 @@ export const PROJECTS: Project[] = [
       "WebSocket",
       "GitHub OAuth",
     ],
-    description: `A real-time chat platform for developers – think "Discord meets Slack".  
-- Built with React (Vite + TypeScript) and Tailwind CSS on the frontend  
+    description: `A real-time chat platform for developers with the "Slack meets Discord" mindset.  
+- Built with React (Vite + TypeScript), shadcn/ui and Tailwind CSS on the frontend  
 - Powered by Java Spring Boot and PostgreSQL on the backend  
 - GitHub OAuth authentication  
-- Real-time messaging with WebSocket  
-- Includes landing page, login feature and a dashboard with live chat rooms
-- Built using Agile (SCRUM) workflow with Trello and GitHub branches`,
+- Real-time messaging with WebSocket
+- State management using Zustand  
+- Includes a landing page, login feature using GitHub OAuth and a dashboard with live chat rooms
+- Built using an Agile (SCRUM) workflow with Trello and GitHub branches`,
     logo: "/icons/project-icons/devtalk-logo.svg",
     isExpanded: true,
   },
@@ -52,7 +54,7 @@ export const PROJECTS: Project[] = [
     ],
     description: `A modern take on my portfolio, blog and component library.  
 - Built while practicing TypeScript, Next.js, Radix UI, Tailwind CSS and Framer Motion  
-- Helped me get better with TypeScript, more comfortable with Next.js and creating clean layouts
+- Helped me learn TypeScript, get more comfortable with Next.js and creating cleaner layouts
 - Clean and modern design
 - Light and dark theme support
 - vCard integration
