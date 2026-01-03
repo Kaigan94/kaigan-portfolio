@@ -21,7 +21,7 @@ export const USER: User = {
   jobTitle: "Game UI Developer Intern (at Avalanche Studios Group)",
   jobs: [
     {
-      title: "Junior UI Developer",
+      title: "UI Developer Intern",
       company: "Avalanche Studios Group",
       website: "https://avalanchestudios.com/",
     },

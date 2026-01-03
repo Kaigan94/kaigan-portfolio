@@ -2,6 +2,31 @@ import type { Project } from "../types/projects";
 
 export const PROJECTS: Project[] = [
   {
+    id: "portfolio-design-student",
+    title: "Digital Content Design Portfolio",
+    period: {
+      start: "12.2025",
+      end: "01.2026",
+    },
+    link: "https://daphne-eriksson-portfolio.vercel.app/",
+    skills: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vercel",
+      "shadcn/ui",
+    ],
+    description: `A modern portfolio website showcasing digital content design work and creative projects.
+- Built with Next.js 16, React and TypeScript for optimal performance
+- Styled with Tailwind CSS for a clean, responsive design
+- Features project galleries, case studies, and design showcases
+- Mobile-first responsive design for all screen sizes
+- Deployed seamlessly on Vercel`,
+    logo: "/icons/project-icons/daphne-portfolio.svg",
+    isExpanded: true,
+  },
+  {
     id: "devtalk",
     title: "DevTalk Chat App",
     period: {
