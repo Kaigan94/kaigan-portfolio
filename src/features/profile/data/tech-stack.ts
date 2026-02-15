@@ -47,19 +47,18 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Framework"],
   },
   {
+    key: "coherent",
+    title: "Coherent Gameface",
+    href: "https://coherent-labs.com/gameface/",
+    segment: "stack",
+    categories: ["Library", "Game UI"],
+  },
+  {
     key: "nextjs2",
     title: "Next.js",
     href: "https://nextjs.org/",
     segment: "stack",
     categories: ["Framework"],
-    theme: true,
-  },
-  {
-    key: "shadcn-ui",
-    title: "shadcn/ui",
-    href: "https://ui.shadcn.com/",
-    segment: "stack",
-    categories: ["Library", "Component Library"],
     theme: true,
   },
   {
@@ -70,14 +69,30 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Library", "Animation"],
   },
   {
+    key: "shadcn-ui",
+    title: "shadcn/ui",
+    href: "https://ui.shadcn.com/",
+    segment: "stack",
+    categories: ["Library", "Component Library"],
+    theme: true,
+  },
+  {
     key: "java",
     title: "Java",
     href: "https://www.java.com/",
     segment: "stack",
     categories: ["Language"],
   },
+  {
+    key: "c++",
+    title: "C++",
+    href: "https://isocpp.org/",
+    segment: "stack",
+    categories: ["Language"],
+  },
 
   // --- Runtime & Backend ---
+
   {
     key: "nodejs",
     title: "Node.js",
@@ -104,16 +119,16 @@ export const TECH_STACK: TechStack[] = [
 
   // --- Tools (API, Version Control, IDE) ---
   {
-    key: "postman",
-    title: "Postman",
-    href: "https://www.postman.com/",
-    segment: "tools",
-    categories: ["Tools", "API"],
-  },
-  {
     key: "git",
     title: "Git",
     href: "https://git-scm.com/",
+    segment: "tools",
+    categories: ["Version Control"],
+  },
+  {
+    key: "perforce",
+    title: "Perforce",
+    href: "https://www.perforce.com/",
     segment: "tools",
     categories: ["Version Control"],
   },
@@ -142,12 +157,12 @@ export const TECH_STACK: TechStack[] = [
   },
 
   // --- AI Tools ---
-  {
-    key: "chat-gpt",
-    title: "ChatGPT",
-    href: "https://chatgpt.com/",
-    segment: "tools",
-    categories: ["Tools", "AI"],
-    theme: true,
-  },
+  // {
+  //   key: "chat-gpt",
+  //   title: "ChatGPT",
+  //   href: "https://chatgpt.com/",
+  //   segment: "tools",
+  //   categories: ["Tools", "AI"],
+  //   theme: true,
+  // },
 ];

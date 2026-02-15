@@ -21,7 +21,7 @@ export const USER: User = {
   jobTitle: "Game UI Developer Intern (at Avalanche Studios Group)",
   jobs: [
     {
-      title: "UI Developer Intern",
+      title: "Game UI Developer Intern",
       company: "Avalanche Studios Group",
       website: "https://avalanchestudios.com/",
     },
@@ -30,7 +30,7 @@ export const USER: User = {
 Hej 👋  
 I’m Nicholas – a frontend developer in the making and fullstack student who enjoys turning my ideas into usable interfaces.
 
-When I’m not deep in code, you’ll probably find me gaming, headbanging, spending time with my dog and partner, exploring fantasy worlds filled with dragons, swords and magic – or recharging with a cup of Java ☕️ (pun intended).
+When I’m not deep in code, you’ll probably find me casting spells, gaming, headbanging, spending time with my dog and partner, exploring fantasy worlds filled with dragons, swords and magic – or recharging with a cup of Java ☕️ (pun intended).
 
 I'm always on the hunt for new challenges and opportunities to grow as a developer. Feel free to reach out if you want to connect or collaborate on something exciting!
   `,
@@ -57,6 +57,7 @@ I'm always on the hunt for new challenges and opportunities to grow as a develop
     "react",
     "lund",
     "sweden",
+    "intern",
   ],
   dateCreated: "2025-09-11", // YYYY-MM-DD
 };
